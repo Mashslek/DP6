@@ -26,6 +26,14 @@ window.addEventListener("load", (event) => {
 		})
 	}
 	else if(document.URL.includes('sobre')){
-
+		Array.from(document.querySelectorAll('.contato input'))
+			.forEach((x) =>{x.addEventListener('change',(evt) => {
+				if((x.type == 'checkbox' && x.checked) || (x.type != 'checkbox' && x.value != ''))
+					ga('send','event','contato', x.attributes['id'].value,'preencheu' )
+			})
+		})
+		document.querySelector('.contato button').addEventListener('click',(evt) => {
+			ga('send','event','contato', 'enviado', 'enviado')
+		})
 	}
 });
