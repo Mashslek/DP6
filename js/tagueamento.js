@@ -18,4 +18,14 @@ console.log(ga.q);
 window.addEventListener("load", (event) => {
 	document.querySelector('.menu-lista-contato').addEventListener('click',(evt) => {ga('send','event','menu', 'entre_em_contato', 'link_externo')})
 	document.querySelector('.menu-lista-download').addEventListener('click',(evt) => {ga('send','event','menu', 'download_pdf', 'download_pdf')})
+	if(document.URL.includes('analise')){
+		Array.from(document.querySelectorAll('.cards-montadoras>div'))
+			.forEach((x) =>{x.addEventListener('click',(evt) => {
+				ga('send','event','menu', 'ver_mais', x.attributes('data-name'))
+			})
+		})
+	}
+	else if(document.URL.includes('sobre')){
+
+	}
 });
