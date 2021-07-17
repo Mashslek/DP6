@@ -11,3 +11,9 @@
 ga('create', 'UA-202448807-1', 'auto');
 ga('send', 'pageview');
 console.log(ga.q);
+
+//document.querySelector('.menu-lista-index').addEventListener('click',(evt) => {})
+//document.querySelector('.menu-lista-analise').addEventListener('click',(evt) => {})
+//document.querySelector('.menu-lista-sobre').addEventListener('click',(evt) => {})
+document.querySelector('.menu-lista-contato').addEventListener('click',(evt) => {ga('send','event','menu', 'entre_em_contato', 'link_externo')})
+document.querySelector('.menu-lista-download').addEventListener('click',(evt) => {ga('send','event','menu', 'download_pdf', 'download_pdf')})
