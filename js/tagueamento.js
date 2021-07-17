@@ -21,7 +21,7 @@ window.addEventListener("load", (event) => {
 	if(document.URL.includes('analise')){
 		Array.from(document.querySelectorAll('.cards-montadoras>div'))
 			.forEach((x) =>{x.addEventListener('click',(evt) => {
-				ga('send','event','menu', 'ver_mais', x.attributes['data-name'].value)
+				ga('send','event','analise', 'ver_mais', x.attributes['data-name'].value)
 			})
 		})
 	}
